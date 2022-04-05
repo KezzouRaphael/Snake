@@ -1,0 +1,91 @@
+@font-face{
+  font-family: "Snake";
+  src: url("./imgs/KASNAKE_.TTF") format("truetype");
+}
+h1,p{
+  font-family: "Snake";
+  font-weight: 100;
+  color: black;
+  text-align: center;
+}
+
+body{
+  height : 100vh;
+  width : 100vw;
+  display : flex;
+  flex-direction: column;
+  justify-content : center;
+  align-items : center;
+  margin: 0;
+  background: rgb(251,251,251);
+  background: linear-gradient(90deg, rgba(251,251,251,1) 12%, rgba(244,244,244,1) 54%, rgba(219,219,219,1) 100%);
+  padding-top:5rem;
+}
+#game-board{
+  width:100vmin;
+  height:100vmin;
+  display:grid;
+  grid-template-columns: repeat(15,minmax(0, 45px));
+  grid-template-rows: repeat(15,minmax(0,45px));
+  background-color:lightgreen;
+}
+
+.snake{
+  background-color:green;
+}
+.fruit{
+  background: url("./imgs/green_apple.png") no-repeat;
+  background-size: contain;
+}
+.user_score,.user_best_score{
+  display:flex;
+  gap:0.5rem;
+}
+.scores{
+  display:flex;
+  gap: 2rem;
+}
+#game-score,#game-best-score{
+  font-family: "roboto",sans-serif;
+}
+.head{
+  background: url('./imgs/Snake sprite sheet.png') no-repeat -1px -1px;
+	width: 40px;
+	height: 40px;
+}
+.body{
+	background: url('imgs/Snake sprite sheet.png') no-repeat -94px -85px;
+	width: 40px;
+	height: 40px;
+  background-position-x: right;
+}
+.tail{
+	background: url('imgs/Snake sprite sheet.png') no-repeat -51px -85px;
+	width: 40px;
+	height: 40px;
+  background-position: bottom;
+}
+.head.left{
+  transform: rotate(90deg);
+}
+.head.top{
+  transform: rotate(180deg);
+}
+.head.right{
+  transform: rotate(270deg);
+}
+.body.left{
+  transform: rotate(90deg);
+}
+.body.right{
+  transform: rotate(90deg);
+}
+.tail.left{
+  transform: rotate(270deg);
+}
+.tail.down{
+  transform: rotate(180deg);
+}
+.tail.right{
+  transform: rotate(90deg);
+}

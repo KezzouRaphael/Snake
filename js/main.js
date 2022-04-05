@@ -18,7 +18,7 @@ window.onload = ()=>{
 function main(timer){ 
   if(gameOver){
     if(confirm(`You lost!\nYour score : ${userScore.textContent} .\nRestart?`)){
-      window.location = "/";
+      window.location = "./";
     }
     localStorage.setItem("bestScore", userScore.textContent);
     return
